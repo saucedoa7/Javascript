@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Javascript 101</title>
+
+    <style type="text/css">
+        .circles {
+            margin: 10px;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            float: left;
+            color: white;
+        }
+        
+        #blueCircle {
+            background-color: blue;
+        }
+        
+        #yellowCircle {
+            background-color: yellow;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1 id="text1">Hello Wurl</h1>
+    <button id="changeText">Change txt</button>
+
+    <p id="textStyle">Style this text</p>
+    <button id="buttonStyle">Style it!</button>
+
+    <p class="circles" id="blueCircle">
+        .
+    </p>
+
+    <p class="circles" id="yellowCircle">
+        .
+    </p>
+
+
+    <script type="text/javascript">
+        /*
+        document.getElementById("text1").innerHTML = "Text Changed";
+        var x = document.getElementById("text2").innerHTML
+        alert(x);
+        alert('Loaded Page');
+        */
+        document.getElementById("changeText").onclick = function() {
+            document.getElementById("text1").innerHTML = document.getElementById("text1").innerHTML + " Text Changed";
+        }
+
+        document.getElementById("buttonStyle").onclick = function() {
+            document.getElementById("textStyle").style.color = "#4797CF";
+        }
+
+        document.getElementById("blueCircle").onclick = function() {
+            document.getElementById("blueCircle").style.display = "none";
+        }
+
+        document.getElementById("yellowCircle").onclick = function() {
+            document.getElementById("yellowCircle").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
