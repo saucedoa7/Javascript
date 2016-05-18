@@ -20,12 +20,18 @@
         #yellowCircle {
             background-color: yellow;
         }
+        
+        #updateTxtBtn {
+            float: none;
+        }
     </style>
 
 
 </head>
 
 <body>
+
+    <!--
     <h1 id="text1">Hello Wurl</h1>
     <button id="changeText">Change txt</button>
 
@@ -40,28 +46,67 @@
         .
     </p>
 
+    <input id="inputTxt" type="text">
+
+    <button id="updateTxtBtn">
+        Chanage Text
+    </button>
+
+    <p id="updatedText">Update this txt</p>
+
+    -->
+
+    <input id="magicTxt">
+    <button id="magigBtn">Check</button>
 
     <script type="text/javascript">
         /*
-        document.getElementById("text1").innerHTML = "Text Changed";
-        var x = document.getElementById("text2").innerHTML
-        alert(x);
-        alert('Loaded Page');
+            document.getElementById("text1").innerHTML = "Text Changed";
+            var x = document.getElementById("text2").innerHTML
+            alert(x);
+            alert('Loaded Page');
+
+            var array = Array;
+            document.getElementById("changeText").onclick = function() {
+                document.getElementById("text1").innerHTML = document.getElementById("text1").innerHTML + " Text Changed";
+            }
+
+            document.getElementById("buttonStyle").onclick = function() {
+                document.getElementById("textStyle").style.color = "#4797CF";
+            }
+
+            document.getElementById("blueCircle").onclick = function() {
+                document.getElementById("blueCircle").style.display = "none";
+            }
+
+            document.getElementById("yellowCircle").onclick = function() {
+                document.getElementById("yellowCircle").style.display = "none";
+            }
+
+
+            document.getElementById("updateTxtBtn").onclick = function() {
+                var newName = document.getElementById("inputTxt").value;
+                document.getElementById("updatedText").innerHTML = newName;
+            }
+
+            var x = 1;
+
+            if(x == 0) {
+
+            }
+                
         */
-        document.getElementById("changeText").onclick = function() {
-            document.getElementById("text1").innerHTML = document.getElementById("text1").innerHTML + " Text Changed";
-        }
 
-        document.getElementById("buttonStyle").onclick = function() {
-            document.getElementById("textStyle").style.color = "#4797CF";
-        }
+        document.getElementById("magigBtn").onclick = function() {
+            
+            var magicWord = "Banana";
+            var guessWord = document.getElementById("magicTxt").value;
 
-        document.getElementById("blueCircle").onclick = function() {
-            document.getElementById("blueCircle").style.display = "none";
-        }
-
-        document.getElementById("yellowCircle").onclick = function() {
-            document.getElementById("yellowCircle").style.display = "none";
+            if (magicWord == guessWord) {
+                alert("Correct!");
+            } else {
+                alert("Sorry, try agian");
+            }
         }
     </script>
 </body>
