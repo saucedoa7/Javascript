@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>How many Fingers?</title>
+</head>
+
+    
+<body>
+    
+    <input id="guessTxt">
+    <button id="guessBtn">Guess</button>
+    <p id="result" style="background-color:yellow"></p>
+    
+    <script type="text/javascript"> 
+    
+        document.getElementById("guessBtn").onclick = function () {
+            var guessedNumber = document.getElementById("guessTxt").value;
+            var randomFinger = (Math.floor(Math.random() * 5) + 1);
+            
+            document.getElementById("result").innerHTML = randomFinger;
+            
+            if(guessedNumber == randomFinger) {
+                document.getElementById("result").innerHTML = "Correct!";
+            } else {
+                document.getElementById("result").innerHTML = "Sorrry the answer was " + randomFinger;
+            }
+        }
+        
+        var tweets = ["tweet 1", "tweet 2", "tweet 3"];
+        var tweetString = "";
+        
+        for (var i = 0; i < tweets.length ; i++){
+            tweetString = tweetString + "<p>" + tweets[i] + "</p>";
+        }
+        
+        document.getElementById("result").innerHTML = tweetString;
+    </script>
+</body>
+</html>
