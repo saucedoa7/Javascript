@@ -9,6 +9,8 @@
     <input id="guessTxt">
     <button id="guessBtn">Guess</button>
     <p id="result" style="background-color:yellow"></p>
+        <p id="colourList" style="background-color:red"></p>
+
     
     <script type="text/javascript"> 
     
@@ -29,10 +31,19 @@
         var tweetString = "";
         
         for (var i = 0; i < tweets.length ; i++){
-            tweetString = tweetString + "<p>" + tweets[i] + "</p>";
+            tweetString += "<p>" + tweets[i] + "</p>";
         }
         
         document.getElementById("result").innerHTML = tweetString;
+        
+        var colors = ["Red", "Yellow", "Blue"];
+          var color = "";
+          
+          for (var i = 0; i < colors.length; i++) {
+              color += colors[i] + "<br>";
+          }
+          
+          document.getElementById("colourList").innerHTML = color;
     </script>
 </body>
 </html>
